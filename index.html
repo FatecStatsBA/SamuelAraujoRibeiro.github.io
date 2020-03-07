@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Quiz Animais</title>
+</head>
+<link rel="stylesheet" href="css/animais.css">
+<body>
+	<h1>Quiz Animal!</h1>
+	<img id='noitinha' onclick="noite()" src='img/night1.svg'></img><br><br><br><br><br>
+	<div id="perguntas" class="grupoRadio">
+		<table id='tabela1' min-width = '500px';>
+			<tr>
+				<th id='categoria'>Classe</th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="ave" onclick="animais()">O animal é uma ave?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="mamifero" onclick="animais()">O animal é mamífero?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="reptil" onclick="animais()">O animal é um réptil?</input></th>
+			</tr>
+		</table>
+		<br><br>
+		<table id='tabela2' >
+			<tr>
+				<th id='categoria'>Meio</th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="aereo" onclick="animais()">O animal é aéreo?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="aquatico" onclick="animais()">O animal é aquático?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="terrestre" onclick="animais()">O animal é terrestre?</input></th>
+			</tr>
+			<tr>
+		</table>
+		<br><br>
+		<table id='tabela3' width="33%">
+			<tr>
+				<th id='categoria'>Dieta</th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="carnivoro" onclick="animais()">O animal é carnívoro?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="frutivoro" onclick="animais()">O animal é frutívoro?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="herbivoro" onclick="animais()">O animal é herbívoro?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="onivoro" onclick="animais()">O animal é onívoro?</input></th>
+			</tr>
+		</table>
+		<br><br>
+		<table id='tabela4'>
+			<tr>
+				<th id='categoria'>Locomoção</th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="nadador" onclick="animais()">O animal é nadador?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="bipede" onclick="animais()">O animal é bípede?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="quadrupede" onclick="animais()">O animal é quadrúpede?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="voador" onclick="animais()">O animal é voador?</input></th>
+			</tr>
+		</table>
+		<br><br>
+		<table id='tabela5'>
+			<tr>
+				<th id='categoria'>Habitat</th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="polar" onclick="animais()">O animal é polar?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="tropical" onclick="animais()">O animal é tropical?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="savana" onclick="animais()">O animal é da Savana?</input></th>
+			</tr>
+		</table>
+		<br><br>
+		<table id='tabela6'>
+			<tr>
+				<th id='categoria'>Fisionomia</th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="casco" onclick="animais()">O animal tem casco?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="nadadeiras" onclick="animais()">O animal tem nadadeiras?</input></th>
+			</tr>
+			<tr>
+				<th id="selecoes"><input type="checkbox" id="rastejar" onclick="animais()">O animal rasteja?</input></th>
+			</tr>
+		</table>
+		<p id='botaoPont'><button onclick="limparPontuacao()">Limpar pontuação</button></p>
+		<p id='botaoCampos'><button onclick="limparCampos()">Limpar campos</button></p>
+		<p id='botaoAll'><button onclick="limparTudo()">Limpar tudo</button></p>
+		<p id="receber"></p><br><br><br><br>
+		<p id="pontos">Pontos: 0</p>
+		<p id="conquistas">Conquistas: 0</p>
+		<p id="final"></p>
+		<p id="creditos"></p>		
+	</div>
+	<div class='imgs' id='cavalo'>
+		<img src='img/cavalo.jpg'>Cavalo
+	</div>
+	<div class='imgs' id='leao'>
+		<img src='img/leão.jpg'>Leão
+	</div>
+	<div class='imgs' id='humano'>
+		<img src='img/bill.jpg'>Humano
+	</div>
+	<div class='imgs' id='macaco'>
+		<img src='img/macaco.jpg'>Macaco
+	</div>
+	<div class='imgs' id='morcego'>
+		<img src='img/morcego2.jpg'>Morcego
+	</div><br><br><br>
+	<p id="sagacidadeTecnica">aaaa</p>
+	<div class='imgs' id='baleia'>
+		<img src='img/baleia.jpg'>Baleia
+	</div>
+	<div class='imgs' id='avestruz'>
+		<img src='img/avestruz.jpg'>Avestruz
+	</div>
+	<div class='imgs' id='pinguim'>
+		<img src='img/pinguim.jpg'>Pinguim
+	</div>
+	<div class='imgs' id='pato'>
+		<img src='img/pato.jpg'>Pato
+	</div>
+	<div class='imgs' id='aguia'>
+		<img src='img/aguia.jpg'>Águia
+	</div><br><br><br>
+	<p id="sagacidadeTecnica">aaaa</p>
+	<div class='imgs' id='tartaruga'>
+		<img src='img/tartaruga.jpg'>Tartaruga
+	</div>
+	<div class='imgs' id='crocodilo'>
+		<img src='img/crocodilo.jpg'>Crocodilo
+	</div>
+	<div class='imgs' id='cobra'>
+		<img src='img/cobra.jpg'>Cobra
+	</div>
+	<p id="sagacidadeTecnica">aaaa</p>
+	<button id=mostrarConquista onclick="mostrarConquista()">Mostrar Conquistas</button><br><br><br><br>
+	<br><br><br>
+	<div id="linha">
+		<div class="coluna">
+			<h2>Conquista 1: Biólogo</h2>
+			<p id="conquistaBiologo" class="divConquistas"></p>
+		</div>
+		<div class="coluna">
+			<h2>Conquista 2: Mutante</h2>
+			<p id="conquistaMutante" class="divConquistas"></p>
+		</div>
+		<div class="coluna">
+			<h2>Conquista 3: Mitológico</h2>
+			<p id="conquistaMitologico" class="divConquistas"></p>
+		</div>
+		<div class="coluna">
+			<h2>Conquista 4: Pré-Histórico</h2>
+			<p id="conquistaPreHistorico" class="divConquistas"></p>
+		</div>
+		<p id="sagacidadeTecnica">aaaa</p>
+		<div id="rept1">
+			<h2>Conquista Secreta: Reptiliano</h2>
+			<p id="reptiliano" class="conquistasSecretas">Como você conseguiu me identificar?</p>
+			<img id='rept' src="img/humano.jpg">
+		</div>
+	</div>
+</body>
+<script src="js/seguranca.js"></script>
+<script src="js/cores_Animais.js"></script>
+<script src="js/block.js"></script>
+<script src="js/limpar.js"></script>
+<script src="js/animais.js"></script>
+</html>
